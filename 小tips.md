@@ -38,6 +38,36 @@ nbtstat -a 10.64.166.26
 
 撤销：u
 
+##### 进程
+
+进程筛选：
+
+```shell
+ps -ef | grep ldap_service_daemon.py
+```
+
+进程筛选且不包含grep本身： 
+
+```shell
+ps -ef | grep ldap_service_daemon.py | grep -v grep
+```
+
+显示进程筛选且不包含grep本身的pid：
+
+```shell
+ps -ef | grep ldap_service_daemon.py | grep -v grep | awk {'print $2'}
+```
+
+
+
+
+
+##### 查找
+
+grep -r 'search_string' ./
+
+find ./ -name 'localclient*'
+
 
 
 #### Mac OS
