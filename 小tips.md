@@ -60,13 +60,32 @@ ps -ef | grep ldap_service_daemon.py | grep -v grep | awk {'print $2'}
 
 
 
+##### 查看端口占用
+
+```shell
+lsof -i:6379
+```
+
 
 
 ##### 查找
 
+```shell
 grep -r 'search_string' ./
 
 find ./ -name 'localclient*'
+```
+
+
+
+##### iptables
+
+```
+iptables -nL --line-number
+
+```
+
+
 
 
 
